@@ -39,6 +39,13 @@ class Book
     return pages;
     
     }
+    
+    public String printDetails(){
+    
+    
+    return String.format("Title: %s, Author: %s, Number of pages: %d",author, title, pages);
+    
+    }
 
     // Add the methods here ...
 }
