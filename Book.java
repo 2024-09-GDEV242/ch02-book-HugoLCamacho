@@ -44,9 +44,12 @@ class Book
     
     public String printDetails(){
     
+        if (refNumber.length() == 0){
     
-    return String.format("Title: %s, Author: %s, Number of pages: %d",author, title, pages);
+    return String.format("Title: %s, Author: %s, Number of pages: %d, Reference number: ZZZ",author, title, pages);} 
     
+    else {
+      return String.format("Title: %s, Author: %s, Number of pages: %d, Reference number: %s",author, title, pages, refNumber);}
     }
     
     public void setRefNumber(String refNum){
