@@ -13,6 +13,7 @@ class Book
     private String title;
     private String refNumber;
     private int pages;
+    private int borrowed;
 
     /**
      * Set the author and title fields when this object
@@ -24,6 +25,7 @@ class Book
         title = bookTitle;
         pages = numOfPages;
         refNumber = "";
+        borrowed = 0;
     }
     
     public String printAuther(){
@@ -46,10 +48,14 @@ class Book
     
         if (refNumber.length() == 0){
     
-    return String.format("Title: %s, Author: %s, Number of pages: %d, Reference number: ZZZ",author, title, pages);} 
+    return String.format(
+    "Title: %s, Author: %s, Number of pages: %d,Reference number: ZZZ, This book was borrowed %d times"
+    ,author, title, pages, borrowed);} 
     
     else {
-      return String.format("Title: %s, Author: %s, Number of pages: %d, Reference number: %s",author, title, pages, refNumber);}
+      return String.format(
+      "Title: %s, Author: %s, Number of pages: %d, Reference number: %s, This book was borrowed %d times"
+      ,author, title, pages, refNumber, borrowed);}
     }
     
     public void setRefNumber(String refNum){
@@ -66,6 +72,15 @@ class Book
     
     return refNumber;
     
+    }
+    
+    public void borrow(){
+    
+    borrowed += 1;
+    }
+    
+    public int getBorrowed(){
+    return borrowed;
     }
 
     // Add the methods here ...
