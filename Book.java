@@ -11,6 +11,7 @@ class Book
     // The fields.
     private String author;
     private String title;
+    private String refNumber;
     private int pages;
 
     /**
@@ -22,6 +23,7 @@ class Book
         author = bookAuthor;
         title = bookTitle;
         pages = numOfPages;
+        refNumber = "";
     }
     
     public String printAuther(){
@@ -44,6 +46,17 @@ class Book
     
     
     return String.format("Title: %s, Author: %s, Number of pages: %d",author, title, pages);
+    
+    }
+    
+    public void setRefNumber(String refNum){
+    
+    refNumber = refNum;
+    }
+    
+    public String getRefNumber(){
+    
+    return refNumber;
     
     }
 
