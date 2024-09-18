@@ -3,8 +3,8 @@
  * This might form part of a larger application such
  * as a library system, for instance.
  *
- * @authorHugo Camacho
- * @version 09/10/2024
+ * @author Hugo Camacho
+ * @version 09/17/2024
  */
 class Book
 {
@@ -29,23 +29,33 @@ class Book
         borrowed = 0;
         courseText = isTextbook;
     }
-    
+    /***
+     * returns the auther of the book
+     */
     public String printAuther(){
     return author;
     
     }
-    
+    /***
+     * returns the title of the book
+     */
     public String printTitle(){
     return title;
     
     }
     
+    /***
+     * Returns the number of pages of the book
+     */
     public int getPages(){
     
     return pages;
     
     }
     
+    /***
+     * Returns details about the book. if there is no ref number, it will display ZZZ as the ref number
+     */
     public String printDetails(){
     
         if (refNumber.length() == 0){
@@ -60,6 +70,9 @@ class Book
       ,author, title, pages, refNumber, borrowed);}
     }
     
+    /***
+     * Sets the reference number for the book. The number has to be atleast 3 characters long
+     */
     public void setRefNumber(String refNum){
        
         if(refNum.length() < 3){
@@ -70,21 +83,34 @@ class Book
     refNumber = refNum;}
     }
     
+    /***
+     *  Returns the referance number of the book
+     */
     public String getRefNumber(){
     
     return refNumber;
     
     }
     
+    
+    /***
+     * Method that adds to a running total each time the book is borrowed
+     */
     public void borrow(){
     
     borrowed += 1;
     }
     
+    /***
+     * Returns the amount of times that a book gets borrowed
+     */
     public int getBorrowed(){
     return borrowed;
     }
     
+    /***
+     * Returns a boolean that tells if a book is a textbook for a course or not
+     */
     public boolean isCourseText(){
     
     
